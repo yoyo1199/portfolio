@@ -4,3 +4,12 @@ body {
 h1 {
       color: #0B0B61;
 }
+h1,h2,p{
+  text-align: center;
+}
+img{
+  
+  display:block; 
+  margin: auto;
+  hieght: 300px;
+  width: 500px;
