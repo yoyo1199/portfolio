@@ -10,8 +10,9 @@ h1,h2,h3,p{
 h1,h2,h3{
   font-family:palatino;
 }
-iframe,link{
-  text-align: center;
+video{
+  display:block; 
+  margin: auto;
 }
 img{
   
