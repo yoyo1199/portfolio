@@ -5,7 +5,7 @@
 <title>Youhwa Mungai</title> 
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body onload="getTime();setInterval(getTime(),1000)">
 <h1>Youhwa Mungai</h1> 
 <p id="date"></p>
 <a href = "home.html" > Home </a>   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
@@ -15,13 +15,14 @@
 <h2> My Portfolio </p> 
 <h3>Timeline of My Life</h3>
 <img src= "File_000.jpeg">
+  img.onclick = function(){
+    <a href ="aboutme
 <img src= "File_001.jpeg">
 <img src= "File_002.jpeg">
 <script>
 function getTime(){
 document.getElementById("date").innerHTML = Date();
 }
-setInterval(getTime(),1000);
 </script>
 </body>
 </html>
