@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
+<title>Youhwa Mungai</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
 
-<head>
-<title>Youhwa Mungai</title> 
-<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body onload="getTime();setInterval(getTime(),1000)">
-<h1>Youhwa Mungai</h1> 
-<p id="date"></p>
-<a href = "home.html" > Home </a>   &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-<a href = "aboutme.html" > About me </a> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-<a href = "coding_experience.html" > Coding Experience </a> &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
-<a href = "MappingClub.html" > Mapping Club </a>   
-<h2> My Portfolio </p> 
-<h3>Timeline of My Life</h3>
-<p>November 18 2000</p>
-<a href = "aboutme.html">
-  <img src= "File_000.jpeg">
-<a>
-<img src= "File_001.jpeg" onclick=<p>hi</p><p>June 2011</p>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+  <img class="w3-image" src="/w3images/photographer.jpg" alt="Me" width="1500" height="600">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">JANE DOE</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">JANE DOE</h5>
+    <h3 class="w3-hide-medium w3-hide-small">PHOTOGRAPHER</h3>
+  </div>
   
-<img src= "File_002.jpeg"><p>May 2014</p>
-<script>
-function getTime(){
-document.getElementById("date").innerHTML = Date();
-}
-</script>
+  <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+    <a href = "home.html" class="w3-bar-item w3-button"> Home </a>   &nbsp;  
+	<a href = "aboutme.html" class="w3-bar-item w3-button" > About me </a> &nbsp; 
+	<a href = "coding_experience.html"class="w3-bar-item w3-button" > Coding Experience </a> &nbsp;  
+	<a href = "MappingClub.html" class="w3-bar-item w3-button"> Mapping Club </a> 
+  </div>
+</header>
+
+<!-- Navbar on small screens -->
+<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+<div class="w3-bar w3-light-grey">
+	<a href = "home.html" class="w3-bar-item w3-button"> Home </a>   &nbsp;  
+	<a href = "aboutme.html" class="w3-bar-item w3-button" > About me </a> &nbsp; 
+	<a href = "coding_experience.html"class="w3-bar-item w3-button" > Coding Experience </a> &nbsp;  
+	<a href = "MappingClub.html" class="w3-bar-item w3-button"> Mapping Club </a>  
+</div>
+</div>
+<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
+
+  <!-- Images (Portfolio) -->
+  <img src="/w3images/ocean.jpg" alt="Ocean" class="w3-image" width="1000" height="500">
+  <img src="/w3images/ocean2.jpg" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/falls2.jpg" alt="Falls" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/mountainskies.jpg" alt="Skies" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="/w3images/mountains2.jpg" alt="Mountains" class="w3-image w3-margin-top" width="1000" height="500">
+
+<!-- End page content -->
+</div>
+
 </body>
 </html>
