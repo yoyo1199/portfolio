@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
 <title>Youhwa Mungai</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body onload="getTime();setInterval(getTime(),1000)">
-<!-- Header -->
-<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
-  <!--<img class="w3-image" src="profile picture 002.jpg" alt="Me" width="1500" height="600"> -->
-  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
-    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">YOUHWA MUNGAI</h1>
-    <h5 class="w3-hide-large" style="white-space:nowrap">YOUHWA MUNGAI</h5>
-    <h3 class="w3-hide-medium w3-hide-small">My Portfolio</h3>
-	<h4 class="w3-hide-medium w3-hide-small" id="date"></h4>
+<header>
+
+  <div>
+    <h1>YOUHWA MUNGAI</h1>
+    <h5>YOUHWA MUNGAI</h5>
+    <h3>My Portfolio</h3>
+	<h4 id="date"></h4>
   </div>
-  
-  <!-- Navbar (placed at the bottom of the header image) -->
-  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
-    <a href = "home.html" class="w3-bar-item w3-button"> Home </a>   &nbsp;  
-	<a href = "aboutme.html" class="w3-bar-item w3-button" > About me </a> &nbsp; 
-	<a href = "coding_experience.html"class="w3-bar-item w3-button" > Coding Experience </a> &nbsp;  
-	<a href = "MappingClub.html" class="w3-bar-item w3-button"> Mapping Club </a> 
+   	 <a href = "home.html"> Home </a>   &nbsp;  
+	<a href = "aboutme.html"> About me </a> &nbsp; 
+	<a href = "coding_experience.html"> Coding Experience </a> &nbsp;  
+	<a href = "MappingClub.html"> Mapping Club </a> 
   </div>
 </header>
 
-<!-- Navbar on small screens -->
-<div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
-<div class="w3-bar w3-light-grey">
-	<a href = "home.html" class="w3-bar-item w3-button"> Home </a>   &nbsp;  
-	<a href = "aboutme.html" class="w3-bar-item w3-button" > About me </a> &nbsp; 
-	<a href = "coding_experience.html"class="w3-bar-item w3-button" > Coding Experience </a> &nbsp;  
-	<a href = "MappingClub.html" class="w3-bar-item w3-button"> Mapping Club </a>  
+	<a href = "home.html"> Home </a>   &nbsp;  
+	<a href = "aboutme.html"> About me </a> &nbsp; 
+	<a href = "coding_experience.html"> Coding Experience </a> &nbsp;  
+	<a href = "MappingClub.html"> Mapping Club </a>  
 </div>
 </div>
-<!-- Page content -->
-<div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
+
+<div id="portfolio">
 
    Images (Portfolio)
   <img src="File_000.jpeg" alt="baby" class="w3-image" width="1000" height="500" onclick="disapear()">
@@ -42,7 +32,7 @@
   <img src="File_002.jpeg" alt="HTS" class="w3-image w3-margin-top" width="1000" height="500">
 
 
-<!-- End page content -->
+
 </div>
 <script>
 function getTime(){
