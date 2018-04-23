@@ -23,9 +23,9 @@ img{
   display:block; 
   margin: auto;
   hieght: 300px;
-  width: 500px;
-  
- #pretty  {
+  width: 500px;	
+}
+ #pretty{
 		background-color: lightblue;
 		padding: 20px;
-
+}
