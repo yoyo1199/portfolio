@@ -1,75 +1,493 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - Youhwa "Yoyo" Mungai</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .photo-category {
+            margin: 3rem 0;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .category-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .category-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            background: transparent;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .instagram-link {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .instagram-link a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .instagram-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-  <h1> Photography </h1>
-    <a href = "home.html" id="pretty"> Home </a>   &nbsp;
-  <h3> Vsco days</h3>
-  <h2> 2015-2017</h2>
-    <img src="BondFire.JPG">
-  &nbsp;
-    <img src="Colorado.JPG">
-  &nbsp;
-    <img src="Coloradolake.JPG">
-  &nbsp;
-    <img src="Flower.JPG">
-  &nbsp;
-    <img src="Rainyday.JPG">
-  &nbsp;
-    <img src="TheCliff.JPG">
-  &nbsp;
-    <img src="beachtowels.JPG">
-  &nbsp;
-    <img src="chesapeak.JPG">
-  &nbsp;
-    <img src="dontstare.JPG">
-  &nbsp;
-    <img src="georgetown.JPG">
-  &nbsp;
-    <img src="gtownview.JPG">
-  &nbsp;
-    <img src="highway.JPG">
-  &nbsp;
-    <img src="licenced.JPG">
-  &nbsp;
-    <img src="lighthouse.JPG">
-  &nbsp;
-    <img src="planeride.JPG">
-  &nbsp;
-    <img src="sunsetdrive.JPG">
-  &nbsp;
-   
-  <h2> 2018 </h2>
-  <h3> Raw Unedited Pictures</h3>
-   &nbsp;
-   &nbsp;
-   &nbsp;
-  <h3> Support Day </h3>
-   &nbsp;
-    <img src="Admobuswindow.JPG">
-   &nbsp;
-    <img src="Duoingtown.JPG">
-  &nbsp;
-    <img src="Friendlion.JPG">
-   &nbsp;                                 
-    <img src="friendsunshot.JPG">
-   &nbsp;
-    <img src="gtownhighway.JPG">
-   &nbsp;
-    <img src="makeupshot.JPG">
-   &nbsp;
-    <img src="moveshot.JPG">
-  &nbsp;
-    <img src="redandgrey.JPG">
-   &nbsp;
-    <img src="sunglassesfriend.JPG">
-   &nbsp;
-    <img src="sunlightonfriend.JPG">
-   &nbsp;
-    <img src="welcome.JPG">
-  <h3>For current pictures follow and like my photography page!!!<h3/>
- <a href="https://www.instagram.com/yellow_payges?igsh=MXljOWVudnhidmNl&utm_source=qr/">@yellow.payges</a>
-  
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">YOYO</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="coding_experience.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Photography Gallery</h1>
+                <p>Capturing life's beautiful moments through my lens</p>
+            </div>
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+                    <button class="filter-btn" data-filter="nature">Nature</button>
+                    <button class="filter-btn" data-filter="people">People</button>
+                    <button class="filter-btn" data-filter="urban">Urban</button>
+                    <button class="filter-btn" data-filter="creative">Creative</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VSCO Era (2015-2017) -->
+        <section class="section">
+            <div class="container">
+                <div class="photo-category">
+                    <h2 class="category-title">VSCO Era</h2>
+                    <p class="category-subtitle">2015-2017 • My early photography journey</p>
+                    
+                    <div class="gallery">
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="Colorado.JPG" alt="Colorado Landscape">
+                            <div class="gallery-overlay">
+                                <h4>Colorado Adventures</h4>
+                                <p>Mountain landscapes that took my breath away</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="Coloradolake.JPG" alt="Colorado Lake">
+                            <div class="gallery-overlay">
+                                <h4>Mountain Lake</h4>
+                                <p>Peaceful waters reflecting the sky</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="nature">
+                            <img src="Flower.JPG" alt="Flower Photography">
+                            <div class="gallery-overlay">
+                                <h4>Natural Beauty</h4>
+                                <p>Finding art in the smallest details</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="TheCliff.JPG" alt="The Cliff">
+                            <div class="gallery-overlay">
+                                <h4>The Cliff</h4>
+                                <p>Dramatic landscapes and raw beauty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="georgetown.JPG" alt="Georgetown">
+                            <div class="gallery-overlay">
+                                <h4>Georgetown</h4>
+                                <p>Historic charm and urban landscapes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="gtownview.JPG" alt="Georgetown View">
+                            <div class="gallery-overlay">
+                                <h4>City Views</h4>
+                                <p>Urban perspectives from above</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="highway.JPG" alt="Highway">
+                            <div class="gallery-overlay">
+                                <h4>Open Road</h4>
+                                <p>Journeys and endless possibilities</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="sunsetdrive.JPG" alt="Sunset Drive">
+                            <div class="gallery-overlay">
+                                <h4>Sunset Drive</h4>
+                                <p>Golden hour magic on the road</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="nature">
+                            <img src="BondFire.JPG" alt="Bond Fire">
+                            <div class="gallery-overlay">
+                                <h4>Bond Fire</h4>
+                                <p>Warmth and community moments</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="beachtowels.JPG" alt="Beach Towels">
+                            <div class="gallery-overlay">
+                                <h4>Beach Days</h4>
+                                <p>Summer memories by the water</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="chesapeak.JPG" alt="Chesapeake">
+                            <div class="gallery-overlay">
+                                <h4>Chesapeake Bay</h4>
+                                <p>Waterfront beauty and tranquility</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="creative">
+                            <img src="dontstare.JPG" alt="Don't Stare">
+                            <div class="gallery-overlay">
+                                <h4>Don't Stare</h4>
+                                <p>Creative composition and mood</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="urban">
+                            <img src="licenced.JPG" alt="Licensed">
+                            <div class="gallery-overlay">
+                                <h4>Urban Details</h4>
+                                <p>Finding beauty in everyday structures</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="urban">
+                            <img src="lighthouse.JPG" alt="Lighthouse">
+                            <div class="gallery-overlay">
+                                <h4>Lighthouse</h4>
+                                <p>Guiding lights and coastal beauty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="planeride.JPG" alt="Plane Ride">
+                            <div class="gallery-overlay">
+                                <h4>Travel Moments</h4>
+                                <p>Adventure and new horizons</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="nature">
+                            <img src="Rainyday.JPG" alt="Rainy Day">
+                            <div class="gallery-overlay">
+                                <h4>Rainy Day</h4>
+                                <p>Mood and atmosphere in weather</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Day Era (2018) -->
+        <section class="section">
+            <div class="container">
+                <div class="photo-category">
+                    <h2 class="category-title">Support Day Era</h2>
+                    <p class="category-subtitle">2018 • Raw, unedited moments of life</p>
+                    
+                    <div class="gallery">
+                        <div class="gallery-item" data-category="urban">
+                            <img src="Admobuswindow.JPG" alt="Admo Bus Window">
+                            <div class="gallery-overlay">
+                                <h4>Transit Views</h4>
+                                <p>Life through moving windows</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="Duoingtown.JPG" alt="Duoingtown">
+                            <div class="gallery-overlay">
+                                <h4>Downtown Vibes</h4>
+                                <p>Urban exploration and discovery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="Friendlion.JPG" alt="Friend Lion">
+                            <div class="gallery-overlay">
+                                <h4>Friend Moments</h4>
+                                <p>Capturing personality and friendship</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="friendsunshot.JPG" alt="Friends Sunshot">
+                            <div class="gallery-overlay">
+                                <h4>Golden Hour Friends</h4>
+                                <p>Friendship in the best light</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="landscapes">
+                            <img src="gtownhighway.JPG" alt="Georgetown Highway">
+                            <div class="gallery-overlay">
+                                <h4>Highway Views</h4>
+                                <p>Motion and urban landscapes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="makeupshot.JPG" alt="Makeup Shot">
+                            <div class="gallery-overlay">
+                                <h4>Beauty & Art</h4>
+                                <p>Creative expression and self-care</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="moveshot.JPG" alt="Move Shot">
+                            <div class="gallery-overlay">
+                                <h4>Dynamic Moments</h4>
+                                <p>Capturing movement and energy</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="creative">
+                            <img src="redandgrey.JPG" alt="Red and Grey">
+                            <div class="gallery-overlay">
+                                <h4>Color Studies</h4>
+                                <p>Exploring color and contrast</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="sunglassesfriend.JPG" alt="Sunglasses Friend">
+                            <div class="gallery-overlay">
+                                <h4>Style & Attitude</h4>
+                                <p>Fashion and personality shots</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="sunlightonfriend.JPG" alt="Sunlight on Friend">
+                            <div class="gallery-overlay">
+                                <h4>Natural Lighting</h4>
+                                <p>Sunlight and natural beauty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="people">
+                            <img src="welcome.JPG" alt="Welcome">
+                            <div class="gallery-overlay">
+                                <h4>Welcome Moments</h4>
+                                <p>Hospitality and warm greetings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Photos -->
+        <section class="section">
+            <div class="container">
+                <div class="photo-category">
+                    <h2 class="category-title">More Moments</h2>
+                    <p class="category-subtitle">Various captures from different times</p>
+                    
+                    <div class="gallery">
+                        <div class="gallery-item" data-category="people">
+                            <img src="me at the beach.JPG" alt="Me at the Beach">
+                            <div class="gallery-overlay">
+                                <h4>Beach Day</h4>
+                                <p>Personal moments by the water</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="urban">
+                            <img src="Metrotrainlight.JPG" alt="Metro Train Light">
+                            <div class="gallery-overlay">
+                                <h4>Metro Life</h4>
+                                <p>Urban transit and city lights</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="nature">
+                            <img src="clouds.JPG" alt="Clouds">
+                            <div class="gallery-overlay">
+                                <h4>Sky Watching</h4>
+                                <p>Clouds and atmospheric beauty</p>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-item" data-category="creative">
+                            <img src="scorpio apt.JPG" alt="Scorpio Apartment">
+                            <div class="gallery-overlay">
+                                <h4>Living Spaces</h4>
+                                <p>Home and personal environments</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Link -->
+        <section class="section">
+            <div class="container">
+                <div class="instagram-link">
+                    <h3><i class="fab fa-instagram"></i> Follow My Current Work!</h3>
+                    <p>For my latest photography, follow me on Instagram:</p>
+                    <a href="https://www.instagram.com/yellow_payges?igsh=MXljOWVudnhidmNl&utm_source=qr/" target="_blank">@yellow.payges</a>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.9;">I regularly post new photos and creative content there!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Youhwa "Yoyo" Mungai. All rights reserved.</p>
+            <p>Built with passion and creativity</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeInUp 0.5s ease-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Add animation to gallery items on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
 </body>
 </html>
-

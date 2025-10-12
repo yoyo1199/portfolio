@@ -1,35 +1,440 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Coding Experience - Youhwa "Yoyo" Mungai</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .skill-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .project-demo {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .code-snippet {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .project-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .arduino-demo {
+            background: #f0f8ff;
+            border: 2px solid #4a90e2;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .arduino-demo h4 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
 <body>
-<h2> Coding Experiences </h2>
-  <a href = "home.html" id="pretty"> Home </a>   &nbsp; 
-<h3> Languages </h3>
-<p> Python Html CSS JavaScript Scratch  ArduinoC</p>
-<h2> My Work</h2>
-<h3> Python Projects</h3>
-<p> I used python to recolor this image.</p>
-<button onclick="document.getElementById('MyImage').src='recolored.jpg'">Filter</button> 
-<img id='MyImage' src="paintcolor.jpg">
-<button onclick="document.getElementById('MyImage').src='paintcolor.jpg'">Original</button> 
-<p> I coded this story game,</p>
-<img src= "story game.PNG">
-<h3> scratch projects </h3>
-<p> Using scratch a made a interactive about me project.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">YOYO</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="coding_experience.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Projects & Coding Experience</h1>
+                <p>Exploring the intersection of creativity and technology</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Technical Skills</h2>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <div class="tech-stack" style="justify-content: center;">
+                        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fas fa-code"></i> Arduino C</span>
+                        <span class="skill-badge"><i class="fas fa-puzzle-piece"></i> Scratch</span>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 1.1rem; color: #666;">
+                    I've been exploring programming through various languages and platforms, from visual programming with Scratch to hardware programming with Arduino. Each language has taught me different ways to think about problem-solving and creativity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Python Projects -->
+        <section class="section">
+            <div class="container">
+                <h2>Python Projects</h2>
+                
+                <div class="project-card">
+                    <h3>Image Processing & Color Manipulation</h3>
+                    <p>One of my favorite Python projects involved creating custom image filters and color processing algorithms. This project taught me about digital image processing, color theory, and how to manipulate pixels programmatically.</p>
+                    
+                    <div class="project-demo">
+                        <h4>Interactive Image Filter Demo</h4>
+                        <div class="project-buttons">
+                            <button class="btn" onclick="document.getElementById('pythonImage').src='recolored.jpg'">Apply Custom Filter</button>
+                            <button class="btn" onclick="document.getElementById('pythonImage').src='paintcolor.jpg'">Show Original</button>
+                        </div>
+                        <img id="pythonImage" src="paintcolor.jpg" alt="Python Image Processing" class="demo-image">
+                        <p style="margin-top: 1rem; font-style: italic; color: #666;">
+                            Click the buttons to see the transformation! This demonstrates color manipulation and filtering techniques I developed.
+                        </p>
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">PIL/Pillow</span>
+                        <span class="skill-badge">Image Processing</span>
+                        <span class="skill-badge">Color Theory</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Interactive Story Game</h3>
+                    <p>I created an engaging text-based adventure game that allows players to make choices that affect the story's outcome. This project combined narrative design with programming logic and user interaction.</p>
+                    
+                    <img src="story game.PNG" alt="Story Game Interface" class="demo-image">
+                    <p style="text-align: center; margin-top: 1rem; font-style: italic; color: #666;">
+                        A screenshot from my interactive storytelling game, showcasing branching narratives and user choice mechanics.
+                    </p>
+                    
+                    <div class="tech-stack">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Game Design</span>
+                        <span class="skill-badge">User Input</span>
+                        <span class="skill-badge">Conditional Logic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scratch Projects -->
+        <section class="section">
+            <div class="container">
+                <h2>Scratch Interactive Projects</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">
+                    Scratch was my introduction to programming concepts. These visual programming projects taught me about loops, conditionals, and interactive design.
+                </p>
+                
+                <div class="project-timeline">
+                    <div class="timeline-card">
+                        <h3>Interactive About Me Project</h3>
+                        <p>My first major Scratch project was an interactive presentation about myself. This project taught me the basics of event-driven programming and user interface design.</p>
+                        
+                        <div class="scratch-container">
+                            <div class="scratch-project">
 <iframe allowtransparency="true" width="485" height="402" 
-src="//scratch.mit.edu/projects/embed/167330495/?autostart=false" frameborder="0" allowfullscreen></iframe>    
-<p> I also made a game</p>
-<p> Game Controls:press play</p>
-<p>hold space bar and use mouse to control direction</p>
-  
+                                        src="//scratch.mit.edu/projects/embed/167330495/?autostart=false" 
+                                        frameborder="0" allowfullscreen></iframe>
+                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                    Click the green flag to interact with my about me project!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="skill-badge">Scratch</span>
+                            <span class="skill-badge">Interactive Design</span>
+                            <span class="skill-badge">Event Programming</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Space Adventure Game</h3>
+                        <p>I created an engaging space-themed game where players control a spaceship using the spacebar and mouse. This project introduced me to game mechanics, collision detection, and user controls.</p>
+                        
+                        <div class="scratch-container">
+                            <div class="scratch-project">
 <iframe allowtransparency="true" width="485" height="402" 
-src="//scratch.mit.edu/projects/embed/167762800/?autostart=false" frameborder="0" allowfullscreen></iframe>   
+                                        src="//scratch.mit.edu/projects/embed/167762800/?autostart=false" 
+                                        frameborder="0" allowfullscreen></iframe>
+                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                    <strong>Game Controls:</strong> Hold spacebar and use mouse to control direction
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="skill-badge">Scratch</span>
+                            <span class="skill-badge">Game Development</span>
+                            <span class="skill-badge">Physics</span>
+                            <span class="skill-badge">User Controls</span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-card">
+                        <h3>Advanced Interactive Project</h3>
+                        <p>This project represents my growth in Scratch programming, featuring more complex interactions and creative storytelling elements.</p>
+                        
+                        <div class="scratch-container">
+                            <div class="scratch-project">
 <iframe allowtransparency="true" width="485" height="402" 
- src="//scratch.mit.edu/projects/embed/223789569/?autostart=false" frameborder="0" allowfullscreen></iframe>
-    
-<h3>Html & CSS</h3>
-<p>I used these languages to make this website.<p>
-<h3>ArduinoC</h3>
-<p>I have used ArduinoC to code a robot to have a LED light show, play "You are my Sunshine" on a piezo and to move to the beat. </p>
+                                        src="//scratch.mit.edu/projects/embed/223789569/?autostart=false" 
+                                        frameborder="0" allowfullscreen></iframe>
+                                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                                    Explore this interactive creation and see how my programming skills evolved!
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-stack">
+                            <span class="skill-badge">Scratch</span>
+                            <span class="skill-badge">Advanced Logic</span>
+                            <span class="skill-badge">Creative Programming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development -->
+        <section class="section">
+            <div class="container">
+                <h2>Web Development</h2>
+                <div class="about-content">
+                    <div>
+                        <img src="welcomeProject.PNG" alt="Web Project" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    </div>
+                    <div class="about-text">
+                        <h3>This Website</h3>
+                        <p>I used HTML and CSS to create this entire portfolio website. This project taught me about web design principles, responsive layout, and how to create an engaging user experience.</p>
+                        
+                        <p>From the navigation system to the interactive galleries, every element was carefully crafted to showcase my work while providing an intuitive browsing experience.</p>
+                        
+                        <div class="tech-stack">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Responsive Design</span>
+                            <span class="skill-badge">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arduino Projects -->
+        <section class="section">
+            <div class="container">
+                <h2>Arduino & Hardware Programming</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">
+                    Moving beyond software, I've explored the world of physical computing and hardware programming.
+                </p>
+                
+                <div class="arduino-demo">
+                    <h4><i class="fas fa-microchip"></i> Robot LED Light Show</h4>
+                    <p>I programmed an Arduino robot to create synchronized LED light shows. This project combined hardware control with creative programming, teaching me about:</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>LED control and timing</li>
+                        <li>Hardware-software integration</li>
+                        <li>Pattern generation algorithms</li>
+                        <li>Real-time programming concepts</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="skill-badge">Arduino C</span>
+                        <span class="skill-badge">Hardware Control</span>
+                        <span class="skill-badge">LED Programming</span>
+                        <span class="skill-badge">Timing Algorithms</span>
+                    </div>
+                </div>
+                
+                <div class="arduino-demo">
+                    <h4><i class="fas fa-music"></i> Musical Robot Performance</h4>
+                    <p>I created a robot that plays "You are my Sunshine" on a piezo buzzer while moving to the beat. This project involved:</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Audio generation with piezo buzzers</li>
+                        <li>Motor control and movement programming</li>
+                        <li>Synchronization between audio and movement</li>
+                        <li>Musical timing and rhythm programming</li>
+                    </ul>
+                    
+                    <div class="tech-stack">
+                        <span class="skill-badge">Arduino C</span>
+                        <span class="skill-badge">Audio Programming</span>
+                        <span class="skill-badge">Motor Control</span>
+                        <span class="skill-badge">Synchronization</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript Examples -->
+        <section class="section">
+            <div class="container">
+                <h2>JavaScript & Interactive Web Features</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">
+                    JavaScript brings interactivity to web pages. Here are some examples of what I've implemented.
+                </p>
+                
+                <div class="project-demo">
+                    <h4>Dynamic Content & Real-time Updates</h4>
+                    <p>This portfolio includes several JavaScript features:</p>
+                    <ul style="text-align: left; margin: 1rem 0;">
+                        <li>Real-time clock display</li>
+                        <li>Interactive image galleries</li>
+                        <li>Smooth scrolling navigation</li>
+                        <li>Dynamic content filtering</li>
+                        <li>Responsive animations</li>
+                    </ul>
+                    
+                    <div class="code-snippet">
+// Example: Real-time clock functionality
+function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleString();
+    document.getElementById('current-time').innerHTML = 
+        `&lt;p&gt;${timeString}&lt;/p&gt;`;
+}
+setInterval(updateTime, 1000);
+                    </div>
+                    
+                    <div class="tech-stack">
+                        <span class="skill-badge">JavaScript ES6+</span>
+                        <span class="skill-badge">DOM Manipulation</span>
+                        <span class="skill-badge">Event Handling</span>
+                        <span class="skill-badge">Animation</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Philosophy -->
+        <section class="section">
+            <div class="container">
+                <h2>My Approach to Learning</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        I believe in learning through doing. Each project I've created represents not just a technical achievement, but a journey of discovery and growth.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div class="project-card">
+                            <h3><i class="fas fa-lightbulb"></i> Creative Problem Solving</h3>
+                            <p>I approach programming as a creative medium, finding innovative solutions to challenges.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3><i class="fas fa-users"></i> User-Centered Design</h3>
+                            <p>Every project considers the end user's experience and needs.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3><i class="fas fa-rocket"></i> Continuous Learning</h3>
+                            <p>I'm always exploring new technologies and pushing my boundaries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Youhwa "Yoyo" Mungai. All rights reserved.</p>
+            <p>Built with passion and creativity</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Add animation to project cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .timeline-card, .arduino-demo').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(item);
+        });
+    </script>
 </body>
 </html>

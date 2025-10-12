@@ -1,53 +1,196 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<style>
-	#pretty  {
-		background-color: lightblue;
-		padding: 10px;
-	}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youhwa "Yoyo" Mungai - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">YOYO</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="coding_experience.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <img src="profile picture 002.jpg" alt="Youhwa Mungai" class="hero-image">
+                <h1>Youhwa "Yoyo" Mungai</h1>
+                <p>Creative Developer • Photographer • Artist</p>
+                <div id="current-time"></div>
+            </div>
+        </section>
 
-	</style>
-<title>Youhwa Mungai</title>
-<body onload="getTime();setInterval(getTime(),1000)">
-<header>
+        <!-- Quick Intro Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Welcome to My World</h2>
+                <div class="about-content">
+                    <div>
+                        <img src="yoyo.jpg" alt="Yoyo" style="width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    </div>
+                    <div class="about-text">
+                        <p>Hi there! I'm Yoyo, a passionate creative who loves to explore the intersection of technology and art. From coding interactive projects to capturing life's beautiful moments through photography, I believe in expressing creativity in all its forms.</p>
+                        
+                        <p>Currently seeking opportunities while pursuing my passions in sports, music, poetry, painting, and of course, photography. When I'm not behind the camera or keyboard, you'll find me playing basketball, flag football, or getting lost in adult coloring books.</p>
+                        
+                        <div style="margin-top: 2rem;">
+                            <a href="aboutme.html" class="btn">Learn More About Me</a>
+                            <a href="coding_experience.html" class="btn">View My Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div>
-    <h1>YOUHWA MUNGAI</h1>
-    <h3>My Portfolio</h3>
-	 
-	<h4 id="date"></h4>
-</header>
-  </div>
-	<div class="sidenav">
-	<a href = "home.html" id="frank"> Home </a>   &nbsp;  
-	<a href = "aboutme.html" id="frank"> About me </a> &nbsp; 
-	<a href = "coding_experience.html" id="frank"> Coding Experience </a> &nbsp;   
-	<a href = "photography.html" id="frank"> Photography </a> &nbsp; 
-	</div>
- &nbsp;
- &nbsp;
-&nbsp;
-&nbsp;
-<div>
-<button onclick="document.getElementById('Image2').src='beautiful.png'">Click HERE</button> 	
-  <img id='Image2' src="loc yoyo.jpeg" alt="beautiful" class="w3-image" width="1000" height="500">
-<button onclick="document.getElementById('Image3').src='classy.png'">Click HERE</button> 
-  <img id='Image3'src="everetts house.jpeg" alt="classy" class="w3-image w3-margin-top" width="1000" height="500">
-<button onclick="document.getElementById('Image4').src='cute.png'">Click HERE</button> 
-  <img id='Image4'src="scorpio apt.JPG" alt="Cute" class="w3-image w3-margin-top" width="1000" height="500">
-<button onclick="document.getElementById('Image5').src='Yoga.png'">Click HERE</button> 
-  <img id='Image5'src="Yoga.jpg" alt="Yoga" class="w3-image w3-margin-top" width="1000" height="500">
+        <!-- Featured Work Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Featured Work</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Interactive Image Filter</h3>
+                        <p>Python project showcasing image manipulation and color processing</p>
+                        <div class="interactive-demo">
+                            <button class="btn" onclick="document.getElementById('featuredImage1').src='recolored.jpg'">Apply Filter</button>
+                            <img id="featuredImage1" src="paintcolor.jpg" alt="Original Image" class="demo-image">
+                            <button class="btn" onclick="document.getElementById('featuredImage1').src='paintcolor.jpg'">Original</button>
+                        </div>
+                    </div>
 
-</div>
-	
-<script>
-function getTime(){
-document.getElementById("date").innerHTML = Date();
-}
+                    <div class="project-card">
+                        <h3>Story Game</h3>
+                        <p>Interactive storytelling game built with Python</p>
+                        <img src="story game.PNG" alt="Story Game" class="demo-image">
+                        <p>An engaging narrative experience that lets players shape their own adventure</p>
+                    </div>
 
+                    <div class="project-card">
+                        <h3>Creative Photography</h3>
+                        <p>Capturing life's moments through my lens</p>
+                        <div class="interactive-demo">
+                            <button class="btn" onclick="document.getElementById('featuredImage2').src='classy.png'">Classy</button>
+                            <img id="featuredImage2" src="loc yoyo.jpg" alt="Photography" class="demo-image">
+                            <button class="btn" onclick="document.getElementById('featuredImage2').src='loc yoyo.jpg'">Original</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</script>
+        <!-- Photography Preview -->
+        <section class="section">
+            <div class="container">
+                <h2>Photography Highlights</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="Colorado.JPG" alt="Colorado Landscape">
+                        <div class="gallery-overlay">
+                            <h4>Colorado Adventures</h4>
+                            <p>Capturing the beauty of nature</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Flower.JPG" alt="Flower Photography">
+                        <div class="gallery-overlay">
+                            <h4>Natural Beauty</h4>
+                            <p>Finding art in everyday moments</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="friendsunshot.JPG" alt="Friends Portrait">
+                        <div class="gallery-overlay">
+                            <h4>Friends & Memories</h4>
+                            <p>Documenting life's precious moments</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="lighthouse.JPG" alt="Lighthouse">
+                        <div class="gallery-overlay">
+                            <h4>Urban Landscapes</h4>
+                            <p>Exploring cityscapes and architecture</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="photography.html" class="btn">View Full Photography Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">I'm always excited to collaborate on new projects or just chat about creativity, technology, and life!</p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                        <a href="mailto:Youhwamungai@gmail.com" class="btn">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a href="https://www.instagram.com/yellow_payges?igsh=MXljOWVudnhidmNl&utm_source=qr/" target="_blank" class="btn">
+                            <i class="fab fa-instagram"></i> Photography
+                        </a>
+                    </div>
+                    
+                    <p style="color: #666; font-style: italic;">
+                        "Life is about creating yourself, not finding yourself. Every moment is a new beginning."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Youhwa "Yoyo" Mungai. All rights reserved.</p>
+            <p>Built with passion and creativity</p>
+        </div>
+    </footer>
+
+    <script>
+        // Real-time clock
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleString();
+            document.getElementById('current-time').innerHTML = `<p style="margin-top: 1rem; font-size: 1.1rem; opacity: 0.9;">${timeString}</p>`;
+        }
+        
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
 </body>
 </html>

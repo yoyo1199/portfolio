@@ -1,6 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Youhwa "Yoyo" Mungai</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
 <body>
-<h1>Thank You</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="logo">YOYO</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="coding_experience.html">Projects</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Thank You Section -->
+        <section class="hero">
+            <div class="container">
+                <div style="text-align: center; color: white;">
+                    <i class="fas fa-heart" style="font-size: 4rem; margin-bottom: 2rem; color: #ff6b6b;"></i>
+                    <h1>Thank You!</h1>
+                    <p style="font-size: 1.3rem; margin-bottom: 2rem;">Your message has been received</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <h2>I Appreciate You Reaching Out!</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                        Thank you for taking the time to contact me. I've received your message and will get back to you as soon as possible. Your interest in my work means a lot to me!
+                    </p>
+                    
+                    <div style="background: #f8f9ff; border-radius: 15px; padding: 2rem; margin: 2rem 0;">
+                        <h3 style="color: #667eea; margin-bottom: 1rem;">What happens next?</h3>
+                        <ul style="text-align: left; line-height: 1.8;">
+                            <li>I'll review your message within 24 hours</li>
+                            <li>If you're interested in collaboration, we can discuss opportunities</li>
+                            <li>For photography inquiries, I'll share my current availability</li>
+                            <li>For coding projects, we can explore how I can help</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 3rem 0;">
+                        <h3>While You Wait...</h3>
+                        <p style="margin-bottom: 2rem;">Feel free to explore more of my work:</p>
+                        
+                        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                            <a href="photography.html" class="btn">
+                                <i class="fas fa-camera"></i> View Photography
+                            </a>
+                            <a href="coding_experience.html" class="btn">
+                                <i class="fas fa-code"></i> See Projects
+                            </a>
+                            <a href="aboutme.html" class="btn">
+                                <i class="fas fa-user"></i> Learn About Me
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; border-radius: 15px; padding: 2rem; margin: 2rem 0;">
+                        <h3 style="margin-bottom: 1rem;">Follow My Journey</h3>
+                        <p style="margin-bottom: 1rem;">Stay updated with my latest work and creative projects:</p>
+                        <a href="https://www.instagram.com/yellow_payges?igsh=MXljOWVudnhidmNl&utm_source=qr/" target="_blank" style="color: white; text-decoration: none; font-weight: bold;">
+                            <i class="fab fa-instagram"></i> @yellow.payges
+                        </a>
+                    </div>
+                    
+                    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e1e5e9;">
+                        <p style="color: #666; font-style: italic;">
+                            "Every connection is a new beginning. Thank you for being part of my creative journey."
+                        </p>
+                        <p style="margin-top: 1rem; color: #667eea; font-weight: bold;">
+                            - Yoyo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Youhwa "Yoyo" Mungai. All rights reserved.</p>
+            <p>Built with passion and creativity</p>
+        </div>
+    </footer>
+
+    <script>
+        // Add a little animation to the heart icon
+        document.addEventListener('DOMContentLoaded', function() {
+            const heart = document.querySelector('.fas.fa-heart');
+            if (heart) {
+                setInterval(() => {
+                    heart.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        heart.style.transform = 'scale(1)';
+                    }, 200);
+                }, 2000);
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
 </body>
-</html> 
+</html>
